@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import Pattern from './clock-pattern.png';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="border1">
+        <div className="border2">
+          <div className="middle-point1">
+            <div className="long-arm"></div>
+          </div>
+          <div className="middle-point2">
+            <div className="short-arm"></div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

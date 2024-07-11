@@ -1,34 +1,67 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #e5d3b3;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+}
+
+.border1 {
+  border: solid 3px rgb(89, 88, 88);
+  height: 640px;
+  width: 640px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-image: url('./clock-pattern.png'); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  border-radius: 50%;
 }
 
-.App-link {
-  color: #61dafb;
+.border2 {
+  border: solid 3px rgb(89, 88, 88);
+  height: 600px;
+  width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e5d3b3;
+  border-radius: 50%;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
+.middle-point1, .middle-point2 {
+  height: 4px;
+  width: 4px;
+  border: 7px solid rgb(89, 88, 88);
+  position: absolute;
+  border-radius: 50%;
+}
+
+.middle-point1 {
+  animation: arms-spin infinite 12s linear;
+}
+
+.middle-point2 {
+  animation: arms-spin infinite 3600s linear;
+}
+
+.long-arm {
+  border-top: 4px solid gray;
+  width: 270px;
+  transform: translateX(calc(50% - 130px)) translateY(calc(50% - 2px));
+}
+
+.short-arm {
+  border-top: 4px solid rgb(89, 88, 88);
+  z-index: -100;
+  width: 180px;
+  transform: translateX(calc(50% - 90px)) translateY(calc(50% - 2px));
+}
+
+@keyframes arms-spin {
   from {
     transform: rotate(0deg);
   }
