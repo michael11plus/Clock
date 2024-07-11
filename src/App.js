@@ -1,9 +1,14 @@
-import Pattern from './clock-pattern.png';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
+      <header className="header-nav">
+        <h2 className="header-text">
+          Welcome to the Clock
+        </h2>
+      </header>
+
       <div className="border1">
         <div className="border2">
           <div className="middle-point1">
